@@ -13,7 +13,7 @@ public class SimpleController : MonoBehaviour
 
     private bool jump;
 
-    [SerializeField] private float m_MovePower = 500; // The force added to the player to move it.            
+    [SerializeField] private float m_MovePower; // The force added to the player to move it.            
 
     private const float k_GroundRayLength = 1f; // The length of the ray to check if the player is grounded.
     private Rigidbody m_Rigidbody;
