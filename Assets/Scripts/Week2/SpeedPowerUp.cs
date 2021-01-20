@@ -7,6 +7,8 @@ public class SpeedPowerUp : MonoBehaviour
 
     public float speedModifier;
 
+    public float effectDuration;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +19,21 @@ public class SpeedPowerUp : MonoBehaviour
     void Update()
     {
         
+    }
+
+    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<PlayerBehaviour>())
+        {
+            other.GetComponent<PlayerBehaviour>().ChangeSpeed(speedModifier, effectDuration);
+            RemoveFromGame();
+        }
+    }
+
+    void RemoveFromGame()
+    {
+        Destroy(this.gameObject);
     }
 }

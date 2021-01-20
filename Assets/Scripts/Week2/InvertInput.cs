@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicCollectible : MonoBehaviour
+public class InvertInput : MonoBehaviour
 {
 
-    public int points;    
+    public float effectDuration;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +23,7 @@ public class BasicCollectible : MonoBehaviour
     {
         if (other.GetComponent<PlayerBehaviour>())
         {
-            other.GetComponent<PlayerBehaviour>().AddPoints(points);            
-
+            other.GetComponent<PlayerBehaviour>().InvertInput(effectDuration);
             RemoveFromGame();
         }
     }
@@ -34,3 +33,4 @@ public class BasicCollectible : MonoBehaviour
         Destroy(this.gameObject);
     }
 }
+

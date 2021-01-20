@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1625034825029889955}
   - component: {fileID: 1625034825029889954}
   - component: {fileID: 8034703533820698964}
+  - component: {fileID: 5871789589607209087}
+  - component: {fileID: 290189257}
   m_Layer: 0
   m_Name: SpeedPowerUp
   m_TagString: Untagged
@@ -90,7 +92,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625034825029889953}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -123,4 +125,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418ebbbb87308484e95f6e092474aa63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedModifier: 2
+  speedModifier: 1.5
+  effectDuration: 3
+--- !u!135 &5871789589607209087
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625034825029889953}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.49999997
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &290189257
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625034825029889953}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6
+  m_Center: {x: 0, y: 0, z: 0}

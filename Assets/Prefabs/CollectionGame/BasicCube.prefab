@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2229651166933343526}
   - component: {fileID: 3790043911336711989}
   - component: {fileID: 4944115498264042296}
+  - component: {fileID: 2413036451743618466}
   m_Layer: 0
   m_Name: BasicCube
   m_TagString: Collectible
@@ -124,3 +125,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 1
+--- !u!65 &2413036451743618466
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184666959054028210}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1.1, z: 1.1}
+  m_Center: {x: 0, y: 0, z: 0}

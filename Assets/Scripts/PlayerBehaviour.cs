@@ -13,7 +13,9 @@ public class PlayerBehaviour : MonoBehaviour
 
     public bool gameRunning;
 
-    private SimpleController controls;    
+    private SimpleController controls;
+
+    private float originalMovePower;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +30,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         controls = GetComponent<SimpleController>();
 
-
+        originalMovePower = controls.m_MovePower;
     }
 
 
@@ -51,32 +53,65 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 GameOver();
             }
-        }
-        
+        }       
+
     }
+
+    IEnumerator RunEffectSpeed(float duration)
+    {
+        while (duration > 0)
+        {
+            duration -= Time.deltaTime;
+            yield return null;
+        }
+
+        RestoreSpeed();        
+    }
+
+
+    IEnumerator RunEffectInvertAxis(float duration)
+    {
+        while (duration > 0)
+        {
+            duration -= Time.deltaTime;
+            yield return null;
+        }
+
+        RevertInput();
+    }
+
+    public void AddPoints(int numberOfPoints)
+    {
+        myPoints += numberOfPoints;
+    }
+
+    public void ChangeSpeed(float modifier, float duration)
+    {        
+        controls.m_MovePower *= modifier;        
+        StartCoroutine("RunEffectSpeed", duration);
+    }
+
+
+    public void RestoreSpeed()
+    {
+        controls.m_MovePower = originalMovePower;
+    }
+
+    public void InvertInput(float duration)
+    {
+        controls.invertMovement = true;
+        StartCoroutine("RunEffectInvertAxis", duration);
+    }
+
+    public void RevertInput()
+    {
+        controls.invertMovement = false;
+    }
+        
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<BasicCollectible>())
-        {
-            myPoints += collision.gameObject.GetComponent<BasicCollectible>().points;
-            
-            Destroy(collision.gameObject);
-        }
-        else if (collision.gameObject.GetComponent<SpeedPowerUp>())
-        {
-            controls.m_MovePower *= collision.gameObject.GetComponent<SpeedPowerUp>().speedModifier;
-
-            Destroy(collision.gameObject);
-        }
-        else if (collision.gameObject.tag == "MovementModifier")
-        {
-            controls.invertMovement = true;
-
-            Destroy(collision.gameObject);
-        }
-
-        else
+        if (collision.gameObject.tag == "Environment")
         {            
             lives--;            
         }
