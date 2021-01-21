@@ -18,7 +18,7 @@ public class SimpleController : MonoBehaviour
     private Rigidbody m_Rigidbody; //this will hold the player's rigidbody
 
     public bool invertMovement;
-
+    
     void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
