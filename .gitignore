@@ -58,3 +58,37 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+BuildW3-rightOne/Build/BuildW3-rightOne.data.unityweb
+BuildW3-rightOne/Build/BuildW3-rightOne.json
+BuildW3-rightOne/Build/BuildW3-rightOne.wasm.code.unityweb
+BuildW3-rightOne/Build/BuildW3-rightOne.wasm.framework.unityweb
+BuildW3-rightOne/Build/UnityLoader.js
+BuildW3-rightOne/index.html
+BuildW3-rightOne/TemplateData/favicon.ico
+BuildW3-rightOne/TemplateData/fullscreen.png
+BuildW3-rightOne/TemplateData/progressEmpty.Dark.png
+BuildW3-rightOne/TemplateData/progressEmpty.Light.png
+BuildW3-rightOne/TemplateData/progressFull.Dark.png
+BuildW3-rightOne/TemplateData/progressFull.Light.png
+BuildW3-rightOne/TemplateData/progressLogo.Dark.png
+BuildW3-rightOne/TemplateData/progressLogo.Light.png
+BuildW3-rightOne/TemplateData/style.css
+BuildW3-rightOne/TemplateData/UnityProgress.js
+BuildW3-rightOne/TemplateData/webgl-logo.png
+BuildW3/Build/BuildW3.data.unityweb
+BuildW3/Build/BuildW3.json
+BuildW3/Build/BuildW3.wasm.code.unityweb
+BuildW3/Build/BuildW3.wasm.framework.unityweb
+BuildW3/Build/UnityLoader.js
+BuildW3/index.html
+BuildW3/TemplateData/favicon.ico
+BuildW3/TemplateData/fullscreen.png
+BuildW3/TemplateData/progressEmpty.Dark.png
+BuildW3/TemplateData/progressEmpty.Light.png
+BuildW3/TemplateData/progressFull.Dark.png
+BuildW3/TemplateData/progressFull.Light.png
+BuildW3/TemplateData/progressLogo.Dark.png
+BuildW3/TemplateData/progressLogo.Light.png
+BuildW3/TemplateData/style.css
+BuildW3/TemplateData/UnityProgress.js
+BuildW3/TemplateData/webgl-logo.png

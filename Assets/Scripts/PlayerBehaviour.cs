@@ -78,7 +78,11 @@ public class PlayerBehaviour : MonoBehaviour
 
         else
         {            
-            lives--;            
+            lives--;
+            if (collision.gameObject.tag != "Environment")
+            {
+                Destroy(collision.gameObject);
+            }
         }
     }
 

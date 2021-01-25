@@ -18,7 +18,11 @@ public class SimpleController : MonoBehaviour
     private Rigidbody m_Rigidbody; //this will hold the player's rigidbody
 
     public bool invertMovement;
-    
+
+
+    public bool isVerticalRunner;
+
+    public float playerSpeed;
     void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
@@ -61,7 +65,13 @@ public class SimpleController : MonoBehaviour
             // calculate camera relative direction to move:
             camForward = Vector3.Scale(cam.forward, new Vector3(1, 0, 1)).normalized;
             //move = (v * camForward + h * cam.right).normalized;
+            
             move = (v * camForward + h * cam.right).normalized;
+
+            if (isVerticalRunner)
+            {
+                move = (playerSpeed * camForward + h * cam.right).normalized;
+            }
         }
     }
 
